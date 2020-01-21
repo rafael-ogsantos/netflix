@@ -8,6 +8,8 @@ import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angu
 })
 export class HomeComponent {
 
+  menuOpened = false;
+
   listTitles = [
     {
       trailler: '/assets/videos/trailer_guardioes_da_galaxia_1080p.mp4',
@@ -36,6 +38,10 @@ export class HomeComponent {
       parts: 2,
       categories: ['Épico', 'Filme de fantasia', 'Viagem no espaço']
     }
-  ]
+  ];
+
+  setMenuState(state: boolean){
+    this.menuOpened = state;
+  }
 
 }
